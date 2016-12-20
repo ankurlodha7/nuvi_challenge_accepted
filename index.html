@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuvi Challenge</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body ng-app="UserInfo">
+<div class="container">
+
+    <ul class="nav nav-pills">
+
+        <li role="presentation" ><a href="#/users">Users</a></li>
+        <li role="presentation" ><a href="#/posts">Posts</a></li>
+
+    </ul>
+    <hr>
+    <div>
+        <ng-view></ng-view>
+    </div>
+
+    <hr>
+    <footer>2016 &copy; Ankur Lodha</footer>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+<script src="https://code.angularjs.org/1.5.5/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="controller/userController.js"></script>
+<script src="controller/postController.js"></script>
+<script src="controller/userProfileController.js"></script>
+</body>
+</html>

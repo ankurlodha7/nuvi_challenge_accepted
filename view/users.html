@@ -1,0 +1,34 @@
+<title>Users Page</title>
+<div class="container">
+    <div>
+        <label>Search Users Information:</label>
+
+        <input type="text" ng-model="userSearch" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+    </div>
+    <br>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Actor Detailed Profile</th>
+            <th>Actor Thumbnail</th>
+            <th>Actor Name</th>
+            <th>Description</th>
+            <th>Social Media Platform</th>
+
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <!-- ng-href gets the value of the property into href-->
+        <tr ng-repeat="data in userCtrl.users | filter:userSearch" >
+            <td><a ng-href ="#/users/{{data.id}}"><span class="glyphicon glyphicon-info-sign"></span></a></td>
+            <td><img ng-src="{{data.actor_avator}}" alt=" Actor Thumbnail"></td>
+            <td>{{data.actor_name}}</td>
+            <td>{{data.actor_description}}</td>
+            <td>{{data.provider}}</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
