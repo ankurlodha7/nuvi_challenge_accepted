@@ -23,7 +23,7 @@
         <!-- ng-href gets the value of the property into href-->
         <tr ng-repeat="data in userCtrl.users | filter:userSearch" >
             <td><a ng-href ="#/users/{{data.id}}"><span class="glyphicon glyphicon-info-sign"></span></a></td>
-            <td><img ng-src="{{data.activity_message}}" alt="{{data.actor_name}} image not found "></td>
+            <td><img ng-src="{{data.actor_avator}}" alt="{{data.actor_name}} image not found "></td>
             <td>{{data.actor_name}}</td>
             <td>{{data.actor_description}}</td>
             <td>{{data.provider}}</td>
