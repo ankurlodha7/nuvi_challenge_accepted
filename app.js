@@ -1,6 +1,6 @@
 (function()
 {
-    angular.module('UserInfo',['ngRoute'])
+    angular.module('UserInfo',["chart.js","ngRoute","ngStorage"])
         .config(configFn);
     configFn.$inject=['$routeProvider'];
     function configFn($routeProvider) {
@@ -9,16 +9,9 @@
             controller:'userController',
             controllerAs:'userCtrl'
         })
-        $routeProvider.when('/users/:userid',{
-            templateUrl:'view/userprofile.html',
-            controller:'userProfileController',
-            controllerAs:'userProfile'
-        })
-
-        $routeProvider.when('/posts',{
-            templateUrl:'view/posts.html',
-            controller:'postController',
-            controllerAs:'postCtrl'
+        $routeProvider.when('/chart',{
+            templateUrl:'view/chart.html',
+            controller:'userProfileController'
         })
             .otherwise({
                 redirectTo:'/users'
