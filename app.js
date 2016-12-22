@@ -11,7 +11,8 @@
         })
         $routeProvider.when('/chart',{
             templateUrl:'view/chart.html',
-            controller:'userProfileController'
+            controller:'userProfileController',
+            controllerAs:'chart'
         })
             .otherwise({
                 redirectTo:'/users'

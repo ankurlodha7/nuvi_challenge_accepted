@@ -1,0 +1,7 @@
+
+
+function setCookie(cookieName,cookieValue) {
+    document.cookie = cname + "=" + cvalue + ";";
+}
+
+setcookie(SESSION,NUVI-12345);
